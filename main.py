@@ -33,7 +33,8 @@ def user_choice(choice, rank, to_compare):
 def comparing():
     rank = random.choice(ig_list)
     print(f"""\33[4;34m{rank['username']}\33[0m 
-Owned by \33[34m{rank['owner']}\33[0m 
+Owned by \33[34m{rank['owner']}\33[0m
+{rank['prof_act']}
 \33[1;33m{rank['followers']} million\33[0m followers""") 
     for i in range(len(ig_list)):
         if ig_list[i]['username'] == rank['username']:
@@ -44,7 +45,8 @@ Owned by \33[34m{rank['owner']}\33[0m
     time.sleep(1)
     to_compare = random.choice(ig_list)
     print(f"""\33[4;34m{to_compare['username']}\33[0m 
-Owned by \33[34m{to_compare['owner']}\33[0m""")
+Owned by \33[34m{to_compare['owner']}\33[0m
+{to_compare['prof_act']}""")
     return rank, to_compare
 
 def loading(a):
